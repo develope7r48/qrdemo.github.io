@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Check App</title>
+	<script>
+
+
+var fallbackToStore = function() {
+  window.location.assign('https://play.google.com/store/apps/details?id=com.github.android');
+};
+var openApp = function() {
+  window.location.replace('intent://app/MainActivity#Intent;scheme=tta://parameter_encrypted_texts_of_TV_info;package=com.tta.qr;end');
+};
+var triggerAppOpen = function() {
+  openApp();
+  setTimeout(fallbackToStore, 700);
+};
+
+triggerAppOpen();
+
+</script>
+</head>
+<body>
+
+	<h1>Check Html</h1>
+
+</body>
+</html>
